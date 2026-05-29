@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">ZakatGoldCalculator4</string>
+    <string name="home_title">Gold Zakat Calculator</string>
+    <string name="home_desc">A simple tool designed to help you calculate your gold wealth against the current Nisab threshold.</string>
+    <string name="btn_start">Start</string>
+
+    <string name="hint_gold_weight">Weight of gold (grams)</string>
+    <string name="label_gold_type">Type of Gold:</string>
+    <string name="type_keep">Keep (85g)</string>
+    <string name="type_wear">Wear (200g)</string>
+    <string name="hint_gold_value">Current gold value per gram</string>
+    <string name="btn_reset">Reset</string>
+    <string name="btn_calculate">Calculate</string>
+
+    <string name="results_title">Calculation Results</string>
+    <string name="label_total_value">Total Value of Gold:</string>
+    <string name="label_payable_value">Zakat Payable Value:</string>
+    <string name="label_total_zakat">Total Zakat (2.5%):</string>
+    <string name="default_price">RM 0.00</string>
+
+    <!-- Instruction Activity -->
+    <string name="inst_title">How to Use Gold Zakat Calculator</string>
+    <string name="inst_intro">Follow these simple steps to calculate your gold Zakat:</string>
+    <string name="inst_step1_title">1.           Enter Weight &amp; Gold Value</string>
+    <string name="inst_step1_desc1">              Input your gold weight (in grams) and the</string>
+    <string name="inst_step1_desc2">             current market price per gram.</string>
+    <string name="inst_step2_title">2.          Select Gold Type</string>
+    <string name="inst_step2_desc1">              Choose Keep (85g threshold) or Wear</string>
+    <string name="inst_step2_desc2">             (200g threshold).</string>
+    <string name="inst_step3_title">3.         Calculate and View Result</string>
+    <string name="inst_step3_desc1">             Tap the Calculate button and view the result.</string>
+    <string name="inst_step3_desc2">            Total Gold Value, Zakat Payable Value,</string>
+    <string name="inst_step3_desc3">             and your final 2.5% Zakat Due.</string>
+    <string name="btn_skip">Skip</string>
+
+    <!-- About Activity -->
+    <string name="about_title">About Developer</string>
+    <string name="label_name">NAME</string>
+    <string name="val_name">: NURAMIRA HAFIZAH  BINTI ABU BAKAR</string>
+    <string name="label_student_id">STUDENT ID</string>
+    <string name="val_student_id">: 2025112119</string>
+    <string name="label_group">GROUP</string>
+    <string name="val_group">: RCDCS2515B</string>
+    <string name="label_prog_code">PROGRAMME CODE</string>
+    <string name="val_prog_code">: CDCS251</string>
+    <string name="copyright">© 2026 Nuramira Hafizah. All Rights Reserved.</string>
+    <string name="desc_profile">Profile picture of the developer</string>
+    <string name="btn_github">VIEW MY GITHUB</string>
+</resources>
