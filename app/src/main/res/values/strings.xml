@@ -46,4 +46,7 @@
     <string name="copyright">© 2026 Nuramira Hafizah. All Rights Reserved.</string>
     <string name="desc_profile">Profile picture of the developer</string>
     <string name="btn_github">VIEW MY GITHUB</string>
+    <string name="back_to_home">Back to Home Icon</string>
+    <string name="cb_understand_text">I have read and fully understand the calculator usage guidelines.</string>
+    <string name="btn_next">Next</string>
 </resources>

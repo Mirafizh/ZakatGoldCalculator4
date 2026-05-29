@@ -37,14 +37,22 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setTitle("Gold Zakat Apps");
         }
 
-        // 2. Initialize Input Elements
+        // 🏠 2. Initialize and Setup Home Icon Click Event
+        LinearLayout layoutBack = findViewById(R.id.layout_back);
+        layoutBack.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+            startActivity(intent);
+            finish(); // Closes the current activity to clean up navigation stack
+        });
+
+        // 3. Initialize Input Elements
         etGoldWeight = findViewById(R.id.et_gold_weight);
         etGoldValue = findViewById(R.id.et_gold_value);
         rgGoldType = findViewById(R.id.rg_gold_type);
         Button btnCalculate = findViewById(R.id.btnCalculate);
         Button btnReset = findViewById(R.id.btnReset);
 
-        // 3. Initialize Output Elements & Hide Results Container initially
+        // 4. Initialize Output Elements & Hide Results Container initially
         resultsContainer = findViewById(R.id.results_container);
         tvTotalValue = findViewById(R.id.tv_total_value);
         tvPayableValue = findViewById(R.id.tv_payable_value);
@@ -53,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         // Hiding results container until calculation succeeds
         resultsContainer.setVisibility(View.GONE);
 
-        // 4. Set Up Button Click Listeners
+        // 5. Set Up Button Click Listeners
         btnCalculate.setOnClickListener(v -> performCalculation());
         btnReset.setOnClickListener(v -> resetCalculator());
     }
@@ -118,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
-    // 5. Shared Options Menu Structure Setup (Share / About items)
+    // 6. Shared Options Menu Structure Setup (Share / About items)
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);

@@ -6,7 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home_bg"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity"
+    tools:targetApi="36"
+    tools:ignore="FidelityWarning">
 
     <TextView
         android:id="@+id/text_title"
@@ -29,7 +31,8 @@
         android:id="@+id/text_desc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:text="@string/home_desc"
         android:textAlignment="center"
         android:textColor="#002EA1"
@@ -45,7 +48,8 @@
         android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="64dp"
-        android:paddingHorizontal="48dp"
+        android:paddingStart="48dp"
+        android:paddingEnd="48dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/btn_start"
         android:textAlignment="center"

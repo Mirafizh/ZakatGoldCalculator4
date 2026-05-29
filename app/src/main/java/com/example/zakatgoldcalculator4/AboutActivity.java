@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -24,25 +25,31 @@ public class AboutActivity extends AppCompatActivity {
             getSupportActionBar().setTitle("Gold Zakat Apps");
         }
 
-        // 2. Map GitHub link redirect logic
+        // 🏠 2. Hook home navigation layout bar click event back to HomeActivity
+        LinearLayout layoutBack = findViewById(R.id.layout_back);
+        layoutBack.setOnClickListener(v -> {
+            Intent intent = new Intent(AboutActivity.this, HomeActivity.class);
+            startActivity(intent);
+            finish(); // Destroys this instance to maintain a clean back-stack flow
+        });
+
+        // 3. Map GitHub link redirect logic
         Button btnGithub = findViewById(R.id.btnGithub);
         btnGithub.setOnClickListener(v -> {
-            // Replace with your exact public username URL profile link
             String githubUrl = "https://github.com/Mirafizh/ZakatGoldCalculator4";
-
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(githubUrl));
             startActivity(intent);
         });
     }
 
-    // 3. Inflate standard option menu structure layout
+    // 4. Inflate standard option menu structure layout
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
-    // 4. Shared menu functionality implementation block
+    // 5. Shared menu functionality implementation block
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -53,7 +60,7 @@ public class AboutActivity extends AppCompatActivity {
             shareIntent.setType("text/plain");
             shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Gold Zakat Apps");
 
-            // Combined your message and your GitHub repository link here:
+            // Combined message and GitHub repository link:
             shareIntent.putExtra(Intent.EXTRA_TEXT, "Check out this useful Gold Zakat Calculator app! View the source code here: https://github.com/Mirafizh/ZakatGoldCalculator4");
 
             startActivity(Intent.createChooser(shareIntent, "Share via"));
