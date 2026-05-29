@@ -28,7 +28,7 @@ public class AboutActivity extends AppCompatActivity {
         Button btnGithub = findViewById(R.id.btnGithub);
         btnGithub.setOnClickListener(v -> {
             // Replace with your exact public username URL profile link
-            String githubUrl = "https://github.com/your-username";
+            String githubUrl = "https://github.com/Mirafizh/ZakatGoldCalculator4";
 
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(githubUrl));
             startActivity(intent);
@@ -48,10 +48,14 @@ public class AboutActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.itemShare) {
+            // Trigger a native Android system share sheet
             Intent shareIntent = new Intent(Intent.ACTION_SEND);
             shareIntent.setType("text/plain");
             shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Gold Zakat Apps");
-            shareIntent.putExtra(Intent.EXTRA_TEXT, "Check out this useful Gold Zakat Calculator app!");
+
+            // Combined your message and your GitHub repository link here:
+            shareIntent.putExtra(Intent.EXTRA_TEXT, "Check out this useful Gold Zakat Calculator app! View the source code here: https://github.com/Mirafizh/ZakatGoldCalculator4");
+
             startActivity(Intent.createChooser(shareIntent, "Share via"));
             return true;
         } else if (id == R.id.item_about) {
